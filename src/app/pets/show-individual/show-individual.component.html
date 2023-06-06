@@ -1,0 +1,28 @@
+  <table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Pet Id</th>
+            <th>Pet Name</th>
+            <th>Age</th>
+            <th>Owner</th>
+            <th>Type of animal</th>
+            <th colspan="2" style="text-align: center;"><strong>Action items</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>{{PetDetails.petId}}</td>
+            <td>{{PetDetails.petName}}</td>
+            <td>{{PetDetails.petAge}}</td>
+            <td>{{PetDetails.petOwner}}</td>
+            <td>{{PetDetails.petType}}</td>
+            <td align="center">
+                <button type="button" class="btn btn-dark" mat-button (click)="editDialog(PetDetails)">Edit details</button>
+            </td>
+            <td align="center">
+                <button type="button" class="btn btn-dark" mat-button (click)="openDialog(PetDetails.petId)">More info</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p style="float:right;"><a href="/pets">Back</a></p>

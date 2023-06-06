@@ -1,0 +1,32 @@
+<!-- <div tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Update Pet</h3>
+            </div>
+            <div class="modal-body" *ngIf="pet">
+                <h2>Update {{ pet.petname }} information</h2>
+                <div>
+                    Name:
+                    <input [(ngModel)]="pet.petname" placeholder="Pet Name" />
+                </div>
+                <div>
+                    Age:
+                    <input [(ngModel)]="pet.petage" placeholder="Pet Age" />
+                </div>
+                <button (click)="updatePet(pet)" *ngIf="pet.petid">Save</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div *ngIf="response">
+    <h2>Edit Pet</h2>
+    <div>
+        Name: <input matInput [(ngModel)]="response.petName" placeholder="Name"/>
+    </div>
+    <div>
+        Age: <input matInput [(ngModel)]="response.petAge" placeholder="Name"/>
+    </div>
+    <button (click)="savePetChanges(response.petId, response.petName, response.petAge, response)">Save changes</button>
+</div>

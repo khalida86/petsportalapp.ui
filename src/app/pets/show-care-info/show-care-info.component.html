@@ -1,0 +1,17 @@
+<div tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Care details</h3>
+            </div>
+            <div class="modal-body">
+                <p>Please follow the below instructions in order to best take care of the pet.</p>
+                <table class="table table-borderless">
+                    <tr *ngFor="let CareStep of careSteps; let i = index" [attr.data-index]="i">
+                        <td>{{CareStep}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

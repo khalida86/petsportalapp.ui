@@ -1,0 +1,21 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Pet Id</th>
+            <th>Pet Name</th>
+            <th>Action item</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of PetsList">
+            <td>{{dataItem.petId}}</td>
+            <td>{{dataItem.petName}}</td>
+            <td align="center">
+                <button type="button" class="btn btn-dark" [routerLink]="['viewdetails', dataItem.petId ]">View details</button>
+            </td>
+            <!-- <td align="center">
+                <button type="button" class="btn btn-dark" [routerLink]="['update', dataItem.petId ]">Update</button>
+            </td> -->
+        </tr>
+    </tbody>
+</table>
